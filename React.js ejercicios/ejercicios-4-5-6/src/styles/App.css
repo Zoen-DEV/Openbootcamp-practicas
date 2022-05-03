@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  color: white;
+}
+.App span {
+  border: 2px solid red;
+  padding: 2px 10px 5px 10px;
+}
+.clock{
+  border-bottom: 2px solid white;
+  padding: 20px;
+}
