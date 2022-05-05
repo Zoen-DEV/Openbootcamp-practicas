@@ -1,24 +1,32 @@
 import React from "react";
 
-const Contacto = () => {
+const Contacto = ({ info, status, remove, arr }) => {
+  console.log(arr)
   return (
     <>
-      <tr className="table-active">
-        <td>Jose</td>
-        <td>Hernandes</td>
-        <td>
-          {1 < 2 ? (
-            <i class="bi bi-lightbulb-fill estado"></i>
-          ) : (
-            <i class="bi bi-lightbulb estado"></i>
-          )}
-        </td>
-        <td className="mce">
-          <i id="i1" class="bi bi-search"></i>
-          <i id="i2" class="bi bi-pencil-square"></i>
-          <i id="i3" class="bi bi-trash"></i>
-        </td>
-      </tr>
+        <tr className="table-active">
+          <td>{info.name}</td>
+          <td>{info.lastName}</td>
+          <td>
+            {info.completed ? (
+              <i
+                onClick={() => status(info)}
+                style={{ color: "green" }}
+                className="bi bi-lightbulb-fill estado"
+              ></i>
+            ) : (
+              <i
+                onClick={() => status(info)}
+                style={{ color: "darkred" }}
+                className="bi bi-lightbulb-fill estado"
+              ></i>
+            )}
+          </td>
+          <td className="mce">
+            <i id="i2" className="bi bi-eye-fill"></i>
+            <i onClick={() => remove(info)} id="i3" className="bi bi-trash"></i>
+          </td>
+        </tr>
     </>
   );
 };

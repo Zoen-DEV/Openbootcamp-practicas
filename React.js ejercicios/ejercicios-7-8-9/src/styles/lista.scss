@@ -4,10 +4,12 @@
     margin: 50px auto;
     padding: 20px;
     background-color: #cff4fc;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .estado{
     text-shadow: 1px 1px 2px #222;
-    color: green;
     cursor: pointer;
 }
 
@@ -29,4 +31,36 @@
 .mce #i3{
     color: red;
     cursor: pointer;
+}
+
+// formulario de creacion de contactos
+
+.card{
+    border: 2px solid #232323;
+    padding: 10px;
+    width: 25rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.show-form{
+    display: none;
+}
+
+.close-card{
+    outline: none;
+    border: none;
+    width: 0px;
+    text-align: left;
+    background-color: transparent;
+    color: red;
+}
+.close-card:hover{
+    color: darkred;
+}
+
+.no-cont{
+    display: none;
 }
