@@ -3,6 +3,7 @@ import { Contactos } from "./class/Contacto.class";
 import Contacto from "./Contacto";
 import "../styles/lista.scss";
 import AddContacto from "./AddContacto";
+import MostrarContacto from "./MostrarContacto";
 
 const Lista = () => {
   const tempRef = new useRef();
@@ -36,6 +37,10 @@ const Lista = () => {
     }
   };
 
+  const showPerfil = (item) => {
+    item.current.classList.toggle('show-form')
+  }
+
   return (
     <div className="lista table">
       <table className="table table-info">
@@ -44,7 +49,7 @@ const Lista = () => {
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Estado</th>
-            <th>Mostrar/Crear/Eliminar</th>
+            <th>Mostrar/Eliminar</th>
           </tr>
         </thead>
         <tbody>
@@ -53,6 +58,7 @@ const Lista = () => {
               tempRef.current.classList.add('no-cont');
               return (
                 <Contacto
+                  perfil={showPerfil}
                   status={conected}
                   key={index}
                   info={item}

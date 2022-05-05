@@ -35,7 +35,7 @@
 
 // formulario de creacion de contactos
 
-.card{
+.cards{
     border: 2px solid #232323;
     padding: 10px;
     width: 25rem;
@@ -63,4 +63,34 @@
 
 .no-cont{
     display: none;
+}
+
+.img-perfil{
+    width: 12rem;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid  lightcoral;
+}
+
+.imgbtn-container{
+    display: flex;
+}
+
+.close-modal{
+    outline: none;
+    border: none;
+    width: 0px;
+    text-align: left;
+    background-color: transparent;
+    color: red;
+    position: absolute;
+}
+
+.close-modal:hover{
+    color: darkred;
+}
+
+.perfil{
+    position: absolute;
+    width: 90%;
 }

@@ -35,7 +35,7 @@ const AddContacto = ({ add }) => {
       >
         <i className="bi bi-person-plus-fill"></i>
       </button>
-      <form onSubmit={sendData} className="card show-form" ref={cardRef}>
+      <form onSubmit={sendData} className="card cards show-form" ref={cardRef}>
         <button type="button" onClick={closeForm} className="close-card">
           <i className="bi bi-x-circle-fill"></i>
         </button>
